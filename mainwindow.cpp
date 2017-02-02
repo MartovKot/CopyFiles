@@ -7,6 +7,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->centralWidget->setLayout(ui->mainLayout);
+    ui->cmBx_Contur->addItems(db.isListContur());
+//    ui->treeView->setModel();
+//    ui->treeWidget
 }
 
 MainWindow::~MainWindow()
