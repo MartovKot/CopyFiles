@@ -7,6 +7,13 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->centralWidget->setLayout(ui->mainLayout);
+    QSqlDatabase db = DB::getConnection();
+    qDebug() << db;
+    if (!db.isOpen()){
+        if (!db.open()) {
+            QMessageBox::critical(this,QObject::tr("Ошибка"),tr("База недоступна")+db.lastError().text());
+        }
+    }
 }
 
 MainWindow::~MainWindow()
