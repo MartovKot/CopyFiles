@@ -52,4 +52,3 @@ void DB::createDB()
     }
 
 }
-

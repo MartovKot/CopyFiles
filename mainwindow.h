@@ -21,6 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
     DB db;
+
 };
 
 #endif // MAINWINDOW_H
