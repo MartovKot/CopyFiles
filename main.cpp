@@ -14,6 +14,11 @@ static bool createConnection() //подключение к БД
 
     if (dblink.driverName() == "QSQLITE"){
         QFile file(db_name);
+        //тестовая хрень УБРАТЬ!!!!!
+        if (file.exists()){
+            file.remove();
+        }
+        //
         if (!file.exists()){
             if (file.open(QIODevice::WriteOnly)) {
                 file.close();
@@ -21,9 +26,9 @@ static bool createConnection() //подключение к БД
                 qDebug() << "Файл не создан";
             }
         }
+
+
     }
-
-
 
     if (!dblink.isOpen()){
         if (!dblink.open()) {
@@ -40,8 +45,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     createConnection();
     MainWindow w;
-//    QSqlDatabase db = DB::getConnection();
-//    qDebug() << db;
+    w.setGeometry(200,200,800,400);
     w.show();
 
     return a.exec();

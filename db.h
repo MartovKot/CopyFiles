@@ -13,6 +13,8 @@ class DB : public QObject
 public:
     DB();
     QStringList isListContur();
+    QStringList isListGroupServer(const QString &name_contur);
+    QStringList isListServers(const QString &name_contur, const QStringList &name_group);
 private:
     void createDB();
 };

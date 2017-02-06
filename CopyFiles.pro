@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    db.cpp
+    db.cpp \
+    abstractlistmodelcheckable.cpp
 
 HEADERS  += mainwindow.h \
-    db.h
+    db.h \
+    abstractlistmodelcheckable.h
 
 FORMS    += mainwindow.ui
 QMAKE_LFLAGS += -static -static-libgcc
