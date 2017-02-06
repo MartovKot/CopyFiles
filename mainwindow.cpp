@@ -64,3 +64,11 @@ void MainWindow::on_lstV_GroupServer_clicked(const QModelIndex &index)
     ui->lstV_Servers->setModel(model);
 
 }
+
+void MainWindow::on_tBtn_OpenDir_clicked()
+{
+    QString dir;
+    dir = QFileDialog::getExistingDirectory(this,
+                                tr("Open Directory"),"C:\\",QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    ui->lEd_DirNameIn->setText(dir);
+}
