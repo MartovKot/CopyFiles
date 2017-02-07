@@ -72,3 +72,14 @@ void MainWindow::on_tBtn_OpenDir_clicked()
                                 tr("Open Directory"),"C:\\",QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
     ui->lEd_DirNameIn->setText(dir);
 }
+
+void MainWindow::on_lEd_DirNameIn_textChanged(const QString &arg1)
+{
+    QDir dir;
+    dir.setCurrent(arg1);
+    if(dir.isReadable()){
+        qDebug() << dir.entryInfoList().count();
+//        ui->tEd_FileIn->insertPlainText(dir.entryList(QDir::Files | QDir::NoSymLinks).at(0)+"\n");
+//        ui->tEd_FileIn->insertPlainText(dir.entryList(QDir::Files).at(1)+"\n");
+    }
+}

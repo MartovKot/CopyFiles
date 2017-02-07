@@ -27,6 +27,9 @@ private slots:
 
     void on_tBtn_OpenDir_clicked();
 
+
+    void on_lEd_DirNameIn_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     DB db;

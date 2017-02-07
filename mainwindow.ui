@@ -105,7 +105,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lEd_DirNameIn"/>
+          <widget class="QLineEdit" name="lEd_DirNameIn">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QToolButton" name="tBtn_OpenDir">
@@ -119,19 +123,9 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QListView" name="listView_2">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QScrollBar" name="verticalScrollBar_2">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+          <widget class="QTextEdit" name="tEd_FileIn">
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
